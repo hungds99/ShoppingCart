@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thông Tin Thanh Toán</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="cart">
+            <div>
+                <h4>Giỏ hàng</h4>
+                <div class="row top_content p-2">
+                    <div class="cart_add col-6"><i class="fa fa-check-circle text-success"></i> "Nho Mỹ" đã được thêm
+                        vào giỏ hàng.</div>
+                    <button type="button" class="btn btn-info col-6">Tiếp Tục Xem Sản Phẩm</button>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col">Sản Phẩm</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Tổng</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-3">
+                    <!-- <h5>Cộng Thanh Toán</h5>
+                    <table class="table">
+                        <tr>
+                            <th scope="row">Tạm Tính</th>
+                            <td>----</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tổng Cộng</th>
+                            <td id="total_p">----</td>
+                        </tr>
+                    </table> -->
+                    <button type="button" class="btn btn-success" id="payment">Tiến Hành Thanh Toán</button>
+                </div>
+            </div>
+        </div>
+        <div class="payments">
+            <div>
+                <h4>Đặt Hàng</h4>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4>1. Chọn hình thức thanh toán</h4>
+                    <select class="form-control col-7" id="pay_method">
+                        <option value="5">Thanh Toán Qua Ngân Hàng (5%)</option>
+                        <option value="10">Thanh Toán Qua Thẻ Cào (10%)</option>
+                        <option value="0">Thanh Toán Qua Tiền Mặt (0%)</option>
+                    </select>
+                    <img class="payimg" src="http://maxlock.vn/wp-content/uploads/2019/08/Hinh-thuc-thanh-toan.png" alt="">
+                </div>
+                <div class="col-6">
+                    <h4>2. Xem lại đơn hàng</h4>
+                    <table class="table" id="order">
+
+                    </table>
+                    <button type="button" class="btn btn-success" id="payto">Đặt Hàng</button>
+                    <button type="button" class="btn btn-secondary" id="back">Quay Lại</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modals">
+
+            <!-- Modal content -->
+            <div class="modals-content">
+                <span class="close">&times;</span>
+                <h4>3. Nhập Thông Tin Khách Hàng</h4>
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Họ và Tên">
+                    </div>
+                    <div class="form-group"> 
+                        <input type="text" class="form-control" placeholder="Điện Thoại">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Địa Chỉ">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Ghi Chú"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-success">Thanh Toán</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+<!-- @Author: Đinh Sỹ Hùng -->
+
+</html>
